@@ -1,41 +1,40 @@
-SUPER PABLO BROS — EDICIÓN CRIPTO
-=================================
+SUPER PABLO BROS — LEEME RÁPIDO
+================================
 
-Carpeta portable para PC y móvil. No necesita internet, instalación ni permisos especiales.
+Homenaje original estilo platformer clásico: el toro contra los osos ladrones.
+50 niveles: clásicos (1-10), Torre de Obras (11-19), Torre de Piezas (20-29),
+Frente Estelar (30-39) y Circuito Toro (40-50, con auto, salto, vuelo y monedas).
 
-PC / LAPTOP
------------
-1. Descomprime el ZIP si todavía no lo hiciste.
-2. Abre la carpeta "SuperPabloBros".
-3. Haz doble clic en "index.html".
-4. Presiona ENTER para empezar.
-
-Recomendado: Chrome, Edge, Firefox o Safari actualizado.
-
-MÓVIL
------
-Opción A (la más fácil): abre el enlace de prueba en el navegador del celular.
-Opción B (sin internet): descomprime el ZIP en el teléfono, entra a la carpeta
-y abre "index.html" con el navegador. En Android funciona desde el administrador
-de archivos; en iPhone/iPad depende de la app de archivos que uses.
+CÓMO JUGAR
+----------
+1. Abre la carpeta juego-pipo.
+2. Haz doble clic en index.html. No necesitas instalar nada ni internet.
+3. Pulsa Enter para empezar. Pulsa P para abrir las opciones.
 
 CONTROLES
 ---------
-← → o A D .......... mover
-Espacio / W / ↑ .... saltar
-W dos veces ........ turbo: corres más rápido y saltas más alto
-Shift .............. correr
-Q .................. super salto infinito
-E .................. fuego infinito (mantén pulsado)
-C .................. cambiar arma
-↓ .................. entrar en tuberías
-P .................. opciones / pausa
-R .................. reiniciar nivel
-M .................. silenciar
+Flechas o A/D ......... mover
+Espacio, W o ↑ ........ saltar (W dos veces = turbo)
+Shift ................. correr
+Q ..................... super salto infinito
+E ..................... fuego y balas infinitas (recogen monedas)
+V ..................... alas / vuelo
+C ..................... cambiar de arma
+↓ ..................... entrar en tubería
+P ..................... opciones y pausa (pestaña PANTALLA para tu dispositivo)
+R ..................... reiniciar nivel
+M ..................... silenciar
 
-En pantallas táctiles aparecen botones para todas las acciones.
+En el celular usa los botones de la pantalla: ◀ ▶ ↓ SALTO RUN W×2 SUPER
+FUEGO ALAS ARMA OPCI. En Opciones > PANTALLA puedes cambiar el tamaño y la
+disposición de los botones (auto, izquierda, derecha, compacto).
 
-NOTA IMPORTANTE
----------------
-Las billeteras, los precios y la transferencia final son SIMULADOS.
-No es dinero real y el juego nunca se conecta a internet.
+Los bloques con ! @ * ^ + dan premios: balas, ropa, flor, orejas y alas.
+Al bajar la bandera del nivel 50 aparece una moneda grande final.
+
+AVISO
+-----
+Billeteras, precios, sats y transferencia son SIMULADOS: no es dinero real.
+Todo se guarda en tu dispositivo. El juego nunca usa internet.
+
+Jugar en línea: https://super-ia30.github.io/super-pablo-bros/

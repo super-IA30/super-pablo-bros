@@ -65,32 +65,129 @@ canvas {
   display: none;
   position: absolute;
   inset: auto 0 0 0;
-  padding: 0 clamp(6px, 1.5vw, 14px) clamp(8px, 1.5vw, 14px);
+  padding: 0 clamp(6px, 1.5vw, 14px) calc(clamp(8px, 1.5vw, 14px) + env(safe-area-inset-bottom, 0px));
+  padding-left: max(clamp(6px, 1.5vw, 14px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(6px, 1.5vw, 14px), env(safe-area-inset-right, 0px));
   justify-content: space-between;
   align-items: flex-end;
   gap: 6px;
   pointer-events: none;
+  max-width: 100%;
 }
 
-#touchControls > div { display: flex; gap: clamp(4px, 1.2vw, 12px); pointer-events: auto; }
+#touchControls > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(4px, 1.2vw, 12px);
+  pointer-events: auto;
+}
 
 #touchControls button {
-  width: clamp(30px, 7vw, 52px);
-  height: clamp(36px, 9vw, 50px);
+  width: clamp(32px, 7vw, 52px);
+  height: clamp(40px, 9vw, 50px);
+  min-height: 44px;
   border-radius: 10px;
-  border: 2px solid rgba(255,255,255,.5);
-  background: rgba(0,0,0,.38);
+  border: 2px solid rgba(255,255,255,.7);
+  background: rgba(0,0,0,.55);
   color: #fff;
   font: bold clamp(9px, 2vw, 12px) "Courier New", monospace;
+  text-shadow: 0 1px 2px rgba(0,0,0,.9);
   touch-action: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .08s ease, background-color .08s ease, border-color .08s ease;
+}
+
+#touchControls button:active,
+#touchControls button.pressed,
+#touchControls button[data-active="1"] {
+  transform: translateY(1px) scale(.96);
+  background: rgba(255,210,63,.38);
+  border-color: #ffd23f;
+}
+
+#touchControls button:focus-visible {
+  outline: 2px solid #ffd23f;
+  outline-offset: 2px;
 }
 
 #touchControls button[data-key="KeyQ"] { border-color: #fff36b; color: #fff36b; }
 #touchControls button[data-key="KeyW"] { border-color: #8be9fd; color: #8be9fd; }
 #touchControls button[data-key="KeyE"] { border-color: #ff9d3b; color: #ff9d3b; }
+#touchControls button[data-key="KeyV"] { border-color: #8dffb0; color: #8dffb0; }
 #touchControls button[data-key="KeyP"] { border-color: #b388ff; color: #b388ff; }
+
+/* Configuración de pantalla: document.body.dataset.screen = auto | pixel | suave | ancho | vertical */
+body[data-screen="auto"] canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+body[data-screen="pixel"] canvas { image-rendering: pixelated; }
+
+body[data-screen="suave"] canvas { image-rendering: auto; }
+
+body[data-screen="ancho"] #gameWrap { width: min(100vw, 1400px); }
+
+body[data-screen="vertical"] #gameWrap {
+  width: min(100vw, calc(100vh * 16 / 9 - 28px));
+  width: min(100vw, calc(100dvh * 16 / 9 - 28px));
+}
+
+body[data-screen="vertical"] #app { gap: 5px; padding: 8px 6px 16px; }
+body[data-screen="vertical"] h1 { font-size: clamp(16px, 5vw, 24px); letter-spacing: 3px; }
+body[data-screen="vertical"] .hint { font-size: 11px; line-height: 1.35; }
+body[data-screen="vertical"] .hint.small { font-size: 10px; }
+
+/* Configuración táctil: document.body.dataset.touch = auto | izquierda | derecha | compacto */
+body[data-touch="auto"] #touchControls { justify-content: space-between; }
+
+body[data-touch="izquierda"] #touchControls { justify-content: flex-start; }
+body[data-touch="derecha"] #touchControls { justify-content: flex-end; }
+
+body[data-touch="izquierda"] #touchControls > div,
+body[data-touch="derecha"] #touchControls > div { gap: 4px; flex-wrap: wrap; }
+
+body[data-touch="compacto"] #touchControls {
+  gap: 4px;
+  padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+}
+
+body[data-touch="compacto"] #touchControls > div { gap: 3px; flex-wrap: wrap; }
+
+body[data-touch="compacto"] #touchControls button {
+  width: clamp(28px, 6vw, 38px);
+  height: clamp(34px, 7vw, 40px);
+  min-height: 34px;
+  border-radius: 8px;
+  font-size: 9px;
+}
 
 @media (pointer: coarse) {
   #touchControls { display: flex; }
+}
+
+@media (orientation: portrait) {
+  #app {
+    gap: 6px;
+    padding: 10px 6px calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  h1 { font-size: clamp(17px, 6vw, 26px); letter-spacing: 3px; }
+
+  .hint { font-size: 11px; line-height: 1.35; }
+  .hint.small { font-size: 10px; }
+
+  #touchControls {
+    gap: 4px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+  }
+
+  #touchControls > div { gap: 4px; flex-wrap: wrap; }
+
+  #touchControls button {
+    width: clamp(34px, 10vw, 46px);
+    height: clamp(44px, 11vw, 52px);
+    min-height: 44px;
+  }
 }
