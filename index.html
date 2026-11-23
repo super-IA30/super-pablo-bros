@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Pablo Bros — El toro vs. los osos ladrones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <h1>SUPER PABLO BROS</h1>
+    <div id="gameWrap">
+      <canvas id="game" width="800" height="450" tabindex="0" aria-label="Super Pablo Bros"></canvas>
+      <div id="touchControls" aria-hidden="true">
+        <div class="touch-left">
+          <button data-key="ArrowLeft">◀</button>
+          <button data-key="ArrowRight">▶</button>
+          <button data-key="ArrowDown" aria-label="Entrar en tubería">↓</button>
+        </div>
+        <div class="touch-right">
+          <button data-key="ShiftLeft">RUN</button>
+          <button data-key="KeyW">W×2</button>
+          <button data-key="KeyQ">SUPER</button>
+          <button data-key="KeyE">FUEGO</button>
+          <button data-key="KeyC">ARMA</button>
+          <button data-key="Space">SALTO</button>
+          <button data-key="KeyP">OPCI</button>
+        </div>
+      </div>
+    </div>
+    <p class="hint"><strong>Controles:</strong> ← → mover · Espacio/W saltar · <strong>W dos veces</strong> turbo · Shift correr · <strong>Q</strong> super salto ∞ · <strong>E</strong> fuego ∞ · <strong>C</strong> arma · <strong>↓</strong> tubería · <strong>P</strong> opciones · R reiniciar · M silenciar</p>
+    <p class="hint small">Pulsa <strong>P</strong> para abrir el panel de opciones en pausa: música, efectos, volumen, sats por moneda, precio ficticio de BTC, cielo infinito, altcoins y más. Todo se guarda en tu dispositivo y funciona sin internet.</p>
+    <p class="hint small">Homenaje original estilo platformer clásico con arte dibujado por código. Billeteras, precios y transferencia final son <strong>simulados</strong>: no es dinero real.</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

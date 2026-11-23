@@ -1,0 +1,41 @@
+SUPER PABLO BROS — EDICIÓN CRIPTO
+=================================
+
+Carpeta portable para PC y móvil. No necesita internet, instalación ni permisos especiales.
+
+PC / LAPTOP
+-----------
+1. Descomprime el ZIP si todavía no lo hiciste.
+2. Abre la carpeta "SuperPabloBros".
+3. Haz doble clic en "index.html".
+4. Presiona ENTER para empezar.
+
+Recomendado: Chrome, Edge, Firefox o Safari actualizado.
+
+MÓVIL
+-----
+Opción A (la más fácil): abre el enlace de prueba en el navegador del celular.
+Opción B (sin internet): descomprime el ZIP en el teléfono, entra a la carpeta
+y abre "index.html" con el navegador. En Android funciona desde el administrador
+de archivos; en iPhone/iPad depende de la app de archivos que uses.
+
+CONTROLES
+---------
+← → o A D .......... mover
+Espacio / W / ↑ .... saltar
+W dos veces ........ turbo: corres más rápido y saltas más alto
+Shift .............. correr
+Q .................. super salto infinito
+E .................. fuego infinito (mantén pulsado)
+C .................. cambiar arma
+↓ .................. entrar en tuberías
+P .................. opciones / pausa
+R .................. reiniciar nivel
+M .................. silenciar
+
+En pantallas táctiles aparecen botones para todas las acciones.
+
+NOTA IMPORTANTE
+---------------
+Las billeteras, los precios y la transferencia final son SIMULADOS.
+No es dinero real y el juego nunca se conecta a internet.
